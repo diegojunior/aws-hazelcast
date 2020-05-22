@@ -1,0 +1,18 @@
+<hazelcast-client
+        xmlns="http://www.hazelcast.com/schema/client-config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.hazelcast.com/schema/client-config  http://www.hazelcast.com/schema/client-config/hazelcast-client-config-4.0.xsd">
+
+    <network>
+        <aws enabled="true">
+            <region>{aws.region}</region>
+            <iam-role>{ec2.instance.role}</iam-role>
+            <host-header>ec2</host-header>
+            <tag-key>aws:cloudformation:stack-name</tag-key>
+            <tag-value>{cluster.stack.name}</tag-value>
+        </aws>
+
+    </network>
+
+
+</hazelcast-client>
