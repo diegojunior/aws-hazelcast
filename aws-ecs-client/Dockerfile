@@ -5,7 +5,7 @@ ARG JAR_FILE=target/*.jar
 COPY config/*.xml /config/
 COPY ${JAR_FILE} app.jar
 
-RUN apt-get update && apt-get -y install curl
+RUN apt-get update && apt-get -y install curl && apt-get -y install bash
 RUN groupadd -o -g 1000 booter \
     && useradd -o -r -m -u 1000 -g 1000 booter \
     && chown -R booter:booter app.jar

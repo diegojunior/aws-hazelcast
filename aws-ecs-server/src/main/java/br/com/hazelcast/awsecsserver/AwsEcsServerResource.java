@@ -31,4 +31,10 @@ public class AwsEcsServerResource {
         IMap<String, Mensagem> map = hazelcastInstance.getMap("map");
         return map.get(key);
     }
+
+    @RequestMapping("/")
+    public String get() {
+        System.out.println("HealthCheck OK");
+        return "ok";
+    }
 }

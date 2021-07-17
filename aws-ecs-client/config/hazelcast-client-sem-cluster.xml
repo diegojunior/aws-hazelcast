@@ -16,7 +16,6 @@
     <network>
         <aws enabled="true">
             <region>us-east-1</region>
-            <cluster>${cluster.name}</cluster>
 <!--            <iam-role>ecs-role-hazelcast</iam-role>-->
 <!--            <tag-key>aws:cloudformation:stack-name</tag-key>-->
 <!--            <tag-value>EC2ContainerService-hazelcast-ecs-client</tag-value>-->

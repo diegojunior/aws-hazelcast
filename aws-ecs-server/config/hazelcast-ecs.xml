@@ -35,23 +35,11 @@
 <!--        </join>-->
 <!--    </network>-->
 
-    <!-- Configuracao ECS cluster Fargate-->
-<!--    <network>-->
-<!--        <join>-->
-<!--            <multicast enabled="false"/>-->
-<!--            <aws enabled="true"/>-->
-<!--        </join>-->
-<!--        <interfaces enabled="true">-->
-<!--            <interface>172.31.*.*</interface>-->
-<!--        </interfaces>-->
-<!--    </network>-->
-
-    <!-- Configuracao de ECS com cluster EC2-->
     <network>
         <join>
             <multicast enabled="false"/>
             <aws enabled="true">
-                <region>us-east-1</region>
+                <host-header>ecs</host-header>
             </aws>
         </join>
         <interfaces enabled="true">
